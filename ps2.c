@@ -277,25 +277,20 @@ static void ps2_Update()
 }
 
 /*****************************************************************/
-#if defined(ARDUINO)
+
 __attribute__((weak))
-#endif
 void PS2_PushCallback(kPS2_Buttons_t buttons)
 {
     // to do
 }
 
-#if defined(ARDUINO)
 __attribute__((weak))
-#endif
 void PS2_HoldCallback(kPS2_Buttons_t buttons)
 {
     // to do
 }
 
-#if defined(ARDUINO)
 __attribute__((weak))
-#endif
 void PS2_ReleaseCallback(kPS2_Buttons_t buttons)
 {
     // to do
@@ -365,14 +360,17 @@ int8_t PS2_RightJoy_ReadLeftRight()
 {
     return ps2_right_joy_leftright_value;
 }
+
 int8_t PS2_RightJoy_ReadUpDown()
 {
     return ps2_right_joy_updown_value;
 }
+
 int8_t PS2_LeftJoy_ReadLeftRight()
 {
     return ps2_left_joy_leftright_value;
 }
+
 int8_t PS2_LeftJoy_ReadUpDown()
 {
     return ps2_left_joy_updown_value;
